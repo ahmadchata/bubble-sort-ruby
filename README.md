@@ -3,7 +3,7 @@
 > This is a bubble sort method that takes an array, loops through it and returns a sorted array after comparing the adjacent elements in the array and swapping if the left is greater than the right.
 
 # Here's an illustration of the bubble sort algorithm
-![screenshot](images/buble-sort.gif)
+![screenshot](images/bubble-sort.gif)
 
 
 ![screenshot](images/screenshot.png)
