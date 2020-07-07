@@ -29,6 +29,25 @@ def bubble_sort(array)
 end
 
 
-a=[1,4,3,2,8,7]
-b=[101,34,200,1,23,5]
-puts bubble_sort(b)
+puts bubble_sort([4,3,78,2,0,2])
+
+def bubble_sort_by(array)
+    n = array.length
+    count = 0
+    while count <= n do
+        (n-1).times do |i|
+            if yield(array[i], array[i + 1]).positive?
+                interchange_elements = false
+                array[i], array[i + 1] = array[i + 1], array[i]
+                interchange_elements = true
+            end
+        end
+        count += 1     
+    end
+    return array   
+end
+
+c = bubble_sort_by(["marshall","hi","hello","hey"]) do |left,right| 
+        left.length - right.length
+end
+puts c
